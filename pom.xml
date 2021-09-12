@@ -1,0 +1,40 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" 
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+<modelVersion>4.0.0</modelVersion>
+<groupId>attw.info</groupId>
+<artifactId>SpringBoot_TEST</artifactId>
+<version>0.0.1-SNAPSHOT</version>
+<name>SpringBoot_TEST</name>
+<parent>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-parent</artifactId>
+    <version>2.1.4.RELEASE</version>
+</parent>
+<dependencies>
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-web</artifactId>
+    </dependency>
+</dependencies>
+<build>
+    <plugins>
+        <plugin>
+           <artifactId>maven-deploy-plugin</artifactId>
+           <version>2.8.1</version>
+        </plugin>
+    </plugins>
+</build>
+<distributionManagement>
+    <repository>
+        <id>jack_maven</id>
+        <name>releases</name>
+        <url>http://127.0.0.1:8081/repository/jack/</url>
+    </repository>
+    <snapshotRepository>
+        <id>snapshots</id>
+        <name>snapshots</name>
+        <url>http://127.0.0.1:8081/repository/jack/</url>
+    </snapshotRepository>
+</distributionManagement>
+</project>
